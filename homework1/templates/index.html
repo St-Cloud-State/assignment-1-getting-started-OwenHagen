@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Application Portal</title>
+</head>
+<body>
+    <h1>Acme Financial Loan Portal</h1>
+
+    <!-- Section to accept an application -->
+    <div id="acceptApplication">
+        <h2>Accept Application</h2>
+        <input type="text" id="applicantName" placeholder="Name">
+        <input type="text" id="zipcode" placeholder="Zipcode">
+        <button onclick="acceptApplication()">Submit Application</button>
+    </div>
+
+    <!-- Section to check application status -->
+    <div id="checkStatus">
+        <h2>Check Application Status</h2>
+        <input type="text" id="applicationNumber" placeholder="Application Number">
+        <button onclick="checkStatus()">Check Status</button>
+    </div>
+
+    <!-- Section to change application status -->
+    <div id="changeStatus">
+        <h2>Change Application Status</h2>
+        <input type="text" id="applicationNumberChange" placeholder="Application Number">
+        <select id="newStatus">
+            <option value="received">Received</option>
+            <option value="processing">Processing</option>
+            <option value="accepted">Accepted</option>
+            <option value="rejected">Rejected</option>
+        </select>
+        <button onclick="changeStatus()">Change Status</button>
+    </div>
+
+    <!-- Divs for feedback -->
+    <div id="applicationResponse"></div>
+    <div id="statusResponse"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
